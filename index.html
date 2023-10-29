@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="./assets/s.css">
+    <title>Navbar Toggle</title>
+    <style>
+        #navbar {
+            display: none;
+        }
+        #menu-icon {
+            display: block;
+        }
+        #close-icon {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-icon">&#9776;</div>
+    <div id="close-icon">&#10006;</div>
+    <nav id="navbar">
+        <ul>
+            <li><a href=".">Home </a></li>
+            <li><a href=".">About</a></li>
+            <li><a href=".">Contact</a></li>
+            <li><a href=".">Blog</a></li>
+        </ul>
+    </nav>
+    
+</body>
+<script src="./assets/script.js"></script>
+<script>
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", () => {
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "block";
+        navbar.style.display = "block";
+    });
+
+    closeIcon.addEventListener("click", () => {
+        menuIcon.style.display = "block";
+        closeIcon.style.display = "none";
+        navbar.style.display = "none";
+    });
+</script>
+</html>
